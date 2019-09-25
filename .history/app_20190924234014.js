@@ -60,8 +60,7 @@ app.get("/analytics", trackVisits, async(req, res, next) => {
     res.render("visits", { pageViews: pageViews });
 });
 
-/*
-app.get("/notes/:id", async(req, res) => {
+/*app.get("/notes/:id", async(req, res) => {
     const notes = await Note.find();
     const note = await Note.findById(req.params.id);
     res.render("show", { notes: notes, currentNote: note, md: md });
@@ -71,8 +70,7 @@ app.get("/notes/:id/edit", async(req, res, next) => {
     const notes = await Note.find();
     const note = await Note.findById(req.params.id);
     res.render("edit", { notes: notes, currentNote: note });
-});
-*/
+});*/
 
 app.patch("/notes/:id", async(req, res) => {
     const id = req.params.id;
